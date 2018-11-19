@@ -1,5 +1,10 @@
 #Want to get a KEY? you need to register as Baidu map developer first.
+#Here is the website:http://lbsyun.baidu.com
 #Dt_centroids is a dataset containing longitude and latitude.
+
+import requests
+import time
+import numpy
 
 url_result=[]
 url_1 = 'http://api.map.baidu.com/geocoder/v2/?callback=renderReverse&location='
