@@ -1,0 +1,11 @@
+#Want to get a KEY? you need to register as Baidu map developer first.
+#Dt_centroids is a dataset containing longitude and latitude.
+
+url_result=[]
+url_1 = 'http://api.map.baidu.com/geocoder/v2/?callback=renderReverse&location='
+url_2 = '&output=json&pois=1&ak=<put your KEY>'
+for x,y in zip(dt_centroids['latitude'],dt_centroids['longitude']):
+    url=url_1+str(y)+','+str(x)+url_2
+    response = requests.get(url)
+    url_result.append(response.text)
+    time.sleep(0.1)
